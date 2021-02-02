@@ -1,6 +1,8 @@
 package no.uia.ikt205.pomodoro
 
 import no.uia.ikt205.pomodoro.util.millisecondsToDescriptiveTime
+import no.uia.ikt205.pomodoro.util.minutesToMilliSeconds
+import no.uia.ikt205.pomodoro.util.intOrString
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -21,5 +23,17 @@ class ExampleUnitTest {
         assertEquals("00:00:00", millisecondsToDescriptiveTime(1))
         assertEquals("00:01:30", millisecondsToDescriptiveTime(90000))
         assertEquals("02:30:01",millisecondsToDescriptiveTime(9001000))
+    }
+
+    @Test
+    fun testMinuteToMsConvertsion(){
+        assertEquals(60000, minutesToMilliSeconds(1))
+    }
+    @Test
+    fun testEditTextInputType(){
+        assertEquals(123, "123".intOrString())
+        assertEquals(-1, "abc".intOrString())
+        assertEquals(-1, "ab3".intOrString())
+        assertEquals(-1, "123a".intOrString())
     }
 }

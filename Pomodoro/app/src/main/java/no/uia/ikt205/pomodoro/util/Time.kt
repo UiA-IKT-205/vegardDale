@@ -7,3 +7,9 @@ fun millisecondsToDescriptiveTime(ms:Long):String {
 
     return String.format("%02d:%02d:%02d", hours, minutes, seconds);
 }
+
+fun minutesToMilliSeconds(minutes:Long):Long{
+    return minutes * 60000
+}
+
+fun String.intOrString() = toIntOrNull() ?: -1
