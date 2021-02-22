@@ -16,6 +16,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <!-- Set time duration buttons -->
+
     <Button
         android:id="@+id/startCountdownButton"
         android:layout_width="wrap_content"
@@ -24,7 +27,48 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countDownView" />
+        app:layout_constraintTop_toBottomOf="@+id/countDownView"
+        />
+
+
+
+    <SeekBar
+        android:id="@+id/seekBarTimer"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:max="@integer/maxWorkTimeDurationSeekBarInMinutes"
+        android:min="@integer/minWorkTimeDurationSeekBarInMinutes"
+        app:layout_constraintTop_toBottomOf="@+id/startCountdownButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <SeekBar
+        android:id="@+id/seekBarPauseTimer"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:max="@integer/maxBreakTimeDurationSeekBarInMinutes"
+        android:min="@integer/minBreakTimeDurationSeekBarInMinutes"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTimer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextIntervalDisplay"
+        android:text="@string/numberOfInterval"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/startCountdownButton"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBarTimer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

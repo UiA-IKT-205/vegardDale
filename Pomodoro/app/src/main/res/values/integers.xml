@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="minWorkTimeDurationSeekBarInMinutes">15</integer>
+    <integer name="maxWorkTimeDurationSeekBarInMinutes">300</integer>
+    <integer name="maxBreakTimeDurationSeekBarInMinutes">90</integer>
+    <integer name="minBreakTimeDurationSeekBarInMinutes">0</integer>
+
+</resources>
