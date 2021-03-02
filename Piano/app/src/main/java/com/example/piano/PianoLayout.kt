@@ -104,7 +104,7 @@ class PianoLayout : Fragment() {
         return view
     }
     private fun checkFileAvailability(file:File):Boolean{
-        if (!file.exists()){
+        if (file.exists()){
             Toast.makeText(this.activity, "File already exists", Toast.LENGTH_SHORT).show()
             return false
         }
