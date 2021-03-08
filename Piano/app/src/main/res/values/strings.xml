@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Piano</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="file_name_for_score">file_name_for_score</string>
+    <string name="save">Save</string>
+    <string name="enter_username">enter username</string>
 </resources>
